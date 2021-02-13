@@ -3,7 +3,6 @@ Simple implementation of a Zabbix sender in Go using the `zabbix` package from h
 The main application in my case is to send Zabbix traps from a Synology NAS. Tested on DS220+.
 
 ## Build
-
 The current `Makefile` creates a Linux executable:
 ```
 make
@@ -12,7 +11,7 @@ make
 ## Run
 Example to update item `backup.status` with value `OK` for host `nas` on Zabbix server `192.168.0.10`:
 ```bash
-./go-zabbix-sender -server 192.168.0.10 -host nas -key backup.status -value OK
+$ ./go-zabbix-sender -server 192.168.0.10 -host nas -key backup.status -value OK
 ```
 
 ## Help
